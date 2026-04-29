@@ -5,6 +5,8 @@ export const Route = createFileRoute("/thank-you")({
   component: ThankYou,
 });
 
+const whatsAppUrl = "https://api.whatsapp.com/send?phone=919398335770&text=Namaste%20Shubham%20Live%2C%20I%20submitted%20a%20booking%20request%20and%20want%20to%20confirm%20details.";
+
 function ThankYou() {
   return (
     <main className="mandala-field flex min-h-screen items-center justify-center bg-background px-5 py-16 text-foreground">
@@ -21,7 +23,7 @@ function ThankYou() {
           <a href="/" className="inline-flex min-h-12 items-center justify-center rounded-full border bg-card px-7 py-3 font-bold shadow-soft transition hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-ring">
             Back Home
           </a>
-          <a href="https://wa.me/919398335770" target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-7 py-3 font-bold text-accent-foreground shadow-gold transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring">
+          <a href={whatsAppUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-7 py-3 font-bold text-accent-foreground shadow-gold transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring">
             <MessageCircle className="h-5 w-5" /> WhatsApp Now
           </a>
         </div>
