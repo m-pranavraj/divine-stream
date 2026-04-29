@@ -121,7 +121,7 @@ function Index() {
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-accent">{event.title}</h3>
                   <p className="mt-3 min-h-16 text-sm leading-6 text-muted-foreground">{event.description}</p>
-                  <p className="mt-5 rounded-full bg-muted px-4 py-2 text-center font-bold text-foreground">₹3000 – ₹5000</p>
+                  <p className="mt-5 rounded-full bg-muted px-4 py-2 text-center font-bold text-foreground">Custom live streaming package</p>
                 </div>
               </article>
             ))}
@@ -150,7 +150,7 @@ function Index() {
       <section id="pricing" className="relative z-10 px-5 py-16">
         <div className="mx-auto max-w-5xl rounded-3xl border bg-card p-8 text-center shadow-gold sm:p-12">
           <h2 className="text-4xl font-bold text-accent sm:text-5xl">Affordable Live Streaming Packages</h2>
-          <p className="mt-5 font-display text-5xl font-bold">₹3000 to ₹5000</p>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Flexible packages planned around your ceremony, venue, and streaming needs.</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[Camera, Radio, CalendarDays].map((Icon, index) => (
               <div key={index} className="rounded-2xl border bg-muted p-5 font-bold"><Icon className="mx-auto mb-3 h-8 w-8 text-accent" />{["Camera Setup", "Live Broadcast", "HD Streaming"][index]}</div>
