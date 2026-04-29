@@ -3,6 +3,7 @@ import { CalendarDays, Camera, Instagram, MessageCircle, Radio, Sparkles, Volume
 import { useRef, useState } from "react";
 
 import engagementImage from "../assets/shubham-engagement.jpg";
+import ganeshaImage from "../assets/shubham-ganesha.jpg";
 import marriageImage from "../assets/shubham-marriage.jpg";
 import receptionImage from "../assets/shubham-reception.jpg";
 import upanayanamImage from "../assets/shubham-upanayanam.jpg";
@@ -28,6 +29,7 @@ function Index() {
   const [musicOn, setMusicOn] = useState(false);
   const audioRef = useRef<AudioContext | null>(null);
   const oscillatorRef = useRef<OscillatorNode | null>(null);
+  const nextUrlRef = useRef<HTMLInputElement | null>(null);
 
   const toggleMusic = () => {
     if (musicOn) {
@@ -86,8 +88,8 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-[20px_1fr_20px] items-center gap-4 md:grid-cols-[42px_1fr_42px]">
           <div className="temple-border h-full min-h-[430px] rounded-full opacity-80" />
           <div className="soft-enter text-center">
-            <div className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full border bg-card shadow-gold">
-              <div className="diya-flame h-14 w-8 rounded-t-full bg-secondary" />
+            <div className="mx-auto mb-8 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border bg-card p-1 shadow-gold sm:h-32 sm:w-32">
+              <img src={ganeshaImage} alt="Lord Ganesha blessing Shubham Live" width={768} height={768} className="h-full w-full rounded-full object-cover" />
             </div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-sm font-semibold text-accent shadow-soft">
               <Sparkles className="h-4 w-4" /> Professional Hindu event live streaming
@@ -172,20 +174,23 @@ function Index() {
           <div>
             <p className="font-bold text-accent">Book a divine broadcast</p>
             <h2 className="mt-2 text-4xl font-bold sm:text-5xl">Contact Shubham Live</h2>
-            <p className="mt-5 text-xl font-bold">Phone: <a className="text-accent" href="tel:9866661452">9866661452</a></p>
+            <p className="mt-5 text-xl font-bold">Phone: <a className="text-accent" href="tel:9398335770">9398335770</a></p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-3 font-bold shadow-soft transition hover:scale-105" href="https://wa.me/919866661452" target="_blank" rel="noreferrer"><MessageCircle className="h-5 w-5 text-accent" /> WhatsApp</a>
+              <a className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-3 font-bold shadow-soft transition hover:scale-105" href="https://wa.me/919398335770" target="_blank" rel="noreferrer"><MessageCircle className="h-5 w-5 text-accent" /> WhatsApp</a>
               <a className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-3 font-bold shadow-soft transition hover:scale-105" href="https://instagram.com/" target="_blank" rel="noreferrer"><Instagram className="h-5 w-5 text-accent" /> Instagram</a>
             </div>
           </div>
-          <form className="rounded-3xl border bg-card p-6 shadow-gold sm:p-8">
+          <form action="https://formsubmit.co/shubhamlivetech@gmail.com" method="POST" onSubmit={() => { if (nextUrlRef.current) nextUrlRef.current.value = `${window.location.origin}/thank-you`; }} className="rounded-3xl border bg-card p-6 shadow-gold sm:p-8">
+            <input ref={nextUrlRef} type="hidden" name="_next" value="" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Shubham Live booking request" />
             <div className="grid gap-5 sm:grid-cols-2">
-              <label className="grid gap-2 font-bold">Name<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="name" placeholder="Your name" /></label>
-              <label className="grid gap-2 font-bold">Phone number<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="phone" inputMode="tel" placeholder="9866661452" /></label>
+              <label className="grid gap-2 font-bold">Name<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="name" placeholder="Your name" required /></label>
+              <label className="grid gap-2 font-bold">Phone number<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="phone" inputMode="tel" placeholder="9398335770" required /></label>
               <label className="grid gap-2 font-bold">Event type<select className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="event"><option>Upanayanam</option><option>Engagement</option><option>Marriage</option><option>Reception</option></select></label>
-              <label className="grid gap-2 font-bold">Date<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="date" type="date" /></label>
+              <label className="grid gap-2 font-bold">Date<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="date" type="date" required /></label>
             </div>
-            <button type="button" className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-8 py-3 font-bold text-accent-foreground shadow-gold transition hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-ring">Request Booking</button>
+            <button type="submit" className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-8 py-3 font-bold text-accent-foreground shadow-gold transition hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-ring">Request Booking</button>
           </form>
         </div>
       </section>
