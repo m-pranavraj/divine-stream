@@ -149,8 +149,72 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    letter-spacing: 0;
+    background-image:
+      radial-gradient(circle at top left, oklch(0.835 0.171 65.2 / 18%), transparent 28rem),
+      radial-gradient(circle at 86% 12%, oklch(0.487 0.153 30.9 / 10%), transparent 24rem),
+      linear-gradient(90deg, oklch(0.704 0.152 75.1 / 5%) 1px, transparent 1px),
+      linear-gradient(0deg, oklch(0.704 0.152 75.1 / 5%) 1px, transparent 1px);
+    background-size: auto, auto, 72px 72px, 72px 72px;
   }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0;
+  }
+}
+
+@layer utilities {
+  .temple-border {
+    background-image: repeating-linear-gradient(180deg, var(--primary) 0 12px, transparent 12px 20px), linear-gradient(var(--accent), var(--primary));
+  }
+
+  .mandala-field {
+    background-image: radial-gradient(circle, transparent 34%, oklch(0.704 0.152 75.1 / 14%) 35% 36%, transparent 37%), radial-gradient(circle, oklch(0.487 0.153 30.9 / 9%) 1px, transparent 1.5px);
+    background-size: 180px 180px, 26px 26px;
+  }
+
+  .diya-flame {
+    animation: diya-flicker 1.8s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 18px oklch(0.835 0.171 65.2 / 88%));
+  }
+
+  .petal-drift {
+    animation: petal-drift 9s linear infinite;
+  }
+
+  .soft-enter {
+    animation: soft-enter 0.8s ease both;
+  }
+}
+
+@keyframes diya-flicker {
+  from { transform: scaleY(0.92) rotate(-2deg); opacity: 0.82; }
+  to { transform: scaleY(1.08) rotate(2deg); opacity: 1; }
+}
+
+@keyframes petal-drift {
+  from { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.78; }
+  to { transform: translate3d(18vw, 110vh, 0) rotate(260deg); opacity: 0; }
+}
+
+@keyframes soft-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .diya-flame, .petal-drift, .soft-enter { animation: none; }
 }
