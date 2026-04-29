@@ -191,6 +191,7 @@ function Index() {
               <label className="grid gap-2 font-bold">Phone number<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="phone" inputMode="tel" placeholder="9398335770" required /></label>
               <label className="grid gap-2 font-bold">Event type<select className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="event"><option>Upanayanam</option><option>Engagement</option><option>Marriage</option><option>Reception</option></select></label>
               <label className="grid gap-2 font-bold">Date<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="date" type="date" required /></label>
+              <label className="grid gap-2 font-bold sm:col-span-2">Muhurtham / Event time<input className="min-h-12 rounded-xl border bg-background px-4 font-normal outline-none focus:ring-2 focus:ring-ring" name="muhurtham_time" type="time" required /></label>
             </div>
             <button type="submit" className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-8 py-3 font-bold text-accent-foreground shadow-gold transition hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-ring">Request Booking</button>
           </form>
