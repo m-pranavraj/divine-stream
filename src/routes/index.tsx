@@ -25,6 +25,8 @@ const petals = Array.from({ length: 12 }, (_, index) => ({
   size: index % 3 === 0 ? "h-3 w-3" : "h-2 w-2",
 }));
 
+const whatsAppUrl = "https://api.whatsapp.com/send?phone=919398335770&text=Namaste%20Shubham%20Live%2C%20I%20want%20to%20book%20live%20streaming%20for%20my%20event.";
+
 function Index() {
   const [musicOn, setMusicOn] = useState(false);
   const audioRef = useRef<AudioContext | null>(null);
@@ -176,7 +178,7 @@ function Index() {
             <h2 className="mt-2 text-4xl font-bold sm:text-5xl">Contact Shubham Live</h2>
             <p className="mt-5 text-xl font-bold">Phone: <a className="text-accent" href="tel:9398335770">9398335770</a></p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-3 font-bold shadow-soft transition hover:scale-105" href="https://wa.me/919398335770" target="_blank" rel="noreferrer"><MessageCircle className="h-5 w-5 text-accent" /> WhatsApp</a>
+              <a className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-3 font-bold shadow-soft transition hover:scale-105" href={whatsAppUrl} target="_blank" rel="noreferrer"><MessageCircle className="h-5 w-5 text-accent" /> WhatsApp</a>
               <a className="inline-flex items-center gap-2 rounded-full border bg-card px-5 py-3 font-bold shadow-soft transition hover:scale-105" href="https://instagram.com/" target="_blank" rel="noreferrer"><Instagram className="h-5 w-5 text-accent" /> Instagram</a>
             </div>
           </div>
