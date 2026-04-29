@@ -40,6 +40,9 @@ function Index() {
     }
 
     const AudioCtor = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtor) {
+      return;
+    }
     const context = new AudioCtor();
     const oscillator = context.createOscillator();
     const gain = context.createGain();
