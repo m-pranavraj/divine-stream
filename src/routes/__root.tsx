@@ -36,9 +36,13 @@ export const Route = createRootRoute({
       { property: "og:description", content: "Preserving Traditions, Streaming Divine Moments Live." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "icon",
+        href: "/favicon.png",
+        type: "image/png",
+      },
       {
         rel: "stylesheet",
         href: appCss,
