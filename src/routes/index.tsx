@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CalendarDays, Camera, Instagram, MessageCircle, Radio, Sparkles, Volume2, VolumeX, Wifi } from "lucide-react";
 import { useRef, useState } from "react";
 
-import engagementImage from "../assets/shubham-engagement.jpg";
+import engagementImage from "../assets/download.png";
 import ganeshaImage from "../assets/shubham-ganesha.jpg";
 import marriageImage from "../assets/shubham-marriage.jpg";
 import receptionImage from "../assets/shubham-reception.jpg";
