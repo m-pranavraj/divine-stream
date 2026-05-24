@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import engagementImage from "../assets/download.png";
 import ganeshaImage from "../assets/shubham-ganesha.jpg";
 import marriageImage from "../assets/shubham-marriage.jpg";
-import receptionImage from "../assets/shubham-reception.jpg";
+import receptionImage from "../assets/pngtree-traditional-south-indian-wedding-couple-cute-cartoon-bride-and-groom-png-image_15745832.png";
 import upanayanamImage from "../assets/shubham-upanayanam.jpg";
 
 export const Route = createFileRoute("/")({
