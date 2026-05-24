@@ -93,9 +93,7 @@ function Index() {
             <div className="mx-auto mb-8 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border bg-card p-1 shadow-gold sm:h-32 sm:w-32">
               <img src={ganeshaImage} alt="Lord Ganesha blessing Shubham Live" width={768} height={768} className="h-full w-full rounded-full object-cover" />
             </div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-sm font-semibold text-accent shadow-soft">
-              <Sparkles className="h-4 w-4" /> Professional Hindu event live streaming
-            </p>
+
             <h1 className="mx-auto max-w-4xl text-6xl font-bold leading-none text-accent sm:text-7xl lg:text-8xl">Shubham Live</h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-muted-foreground sm:text-2xl">Preserving Traditions, Streaming Divine Moments Live</p>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-foreground/85">We provide professional live streaming services for all Hindu traditional events with high quality and reliability.</p>
@@ -111,7 +109,7 @@ function Index() {
       <section id="events" className="relative z-10 px-5 py-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div><p className="font-bold text-accent">Sacred occasions</p><h2 className="text-4xl font-bold sm:text-5xl">Events we stream</h2></div>
+            <div><p className="font-bold text-accent">Book your ceremony</p><h2 className="text-4xl font-bold sm:text-5xl">Tell us what event to live stream</h2></div>
             <a href="#contact" className="font-bold text-accent transition hover:opacity-75">Book your date →</a>
           </div>
           <div className="flex snap-x gap-5 overflow-x-auto pb-5">
